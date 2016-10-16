@@ -2,6 +2,30 @@
 
 @section('content')
 
-    <h1>Hi! I'm from the index.blade.php file</h1>
+    <div id='lorem'>
+
+        <h1>Lorem Ipsem Generator</h1>
+
+        <p>Create paragraphs of fake text for use in mockups</p>
+
+        <form method='POST' action='/lorem'>
+            {{ csrf_field() }}
+            How many paragraphs? <input type='integer' name='paraCount'>
+            <input type='submit' value='Get Paragraphs' name='lorem'>
+        </form>
+
+    </div>
+
+    <div id='users'>
+
+        <h1>Users Generator</h1>
+
+        <form method='POST' action='/users'>
+            {{ csrf_field() }}
+            How many users? <input type='integer' name='userCount'>
+            <input type='submit' value='Get Users' name='/users'>
+        </form>
+
+    </div>
 
 @endsection

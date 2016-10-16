@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>
-        @yield('title', "Developer's Best Friend")
+        Developer's Best Friend
     </title>
 
     <meta charset='utf-8'>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     @yield('head')
 </head>
@@ -13,7 +15,7 @@
 <body>
 
     <header>
-        <h1>This is a proof of concept of the master layout</h1>
+        <a href="index.php">Developer's BFF</a>
     </header>
 
     <section>

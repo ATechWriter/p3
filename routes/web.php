@@ -11,4 +11,20 @@
 |
 */
 
+/*
+| Display the main page with two forms
+*/
 Route::get('/', 'FormController@index');
+
+/*
+| Submit the lorem and user forms
+*/
+Route::post('/lorem', 'LoremController@generate');
+Route::post('/users', 'UserController@generate');
+
+
+/*
+| Tools to scrape names (first and last)
+*/
+// Route::get('/scraper', 'ScraperController@first');
+// Route::get('/scraper', 'ScraperController@last');
