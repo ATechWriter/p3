@@ -22,9 +22,14 @@ Route::get('/', 'FormController@index');
 Route::post('/lorem', 'LoremController@generate');
 Route::post('/users', 'UserController@generate');
 
-
 /*
 | Tools to scrape names (first and last)
 */
-// Route::get('/scraper', 'ScraperController@first');
-// Route::get('/scraper', 'ScraperController@last');
+Route::get('/scraper/first', function() {
+    require_once('copycat.php');
+    $cc = new Copycat;
+    $cc->match(array(
+    'first' => '/class="oxencycl-headword">(.+?)</ms',))->
+    URLs('http://www.oxfordreference.com/view/10.1093/acref/9780198610601.001.0001/acref-9780198610601-e-200');
+    echo $cc;
+});

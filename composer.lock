@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae4e5cc2614dad03419e6f8dc0535a2c",
-    "content-hash": "6d03ff14f2d83b23557bb6809702da36",
+    "hash": "335d8b4d6187f0b6b161ed81758dca5a",
+    "content-hash": "99a588b1af6cbfceb5560244ef5fe5b8",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -214,6 +214,50 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "gidlov/copycat",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gidlov/copycat.git",
+                "reference": "f24ec7c43853ea96a98991a56fcf8cd158e2b3de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gidlov/copycat/zipball/f24ec7c43853ea96a98991a56fcf8cd158e2b3de",
+                "reference": "f24ec7c43853ea96a98991a56fcf8cd158e2b3de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gidlov\\Copycat": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Klas Gidlöv",
+                    "email": "info@gidlov.com",
+                    "homepage": "http://gidlov.com/"
+                }
+            ],
+            "description": "A universal scraping tool that can be used for all kinds of data collection. You can decide from where and what you want. All with regular expression. More info on the Github page.",
+            "homepage": "http://github.com/gidlov/copycat",
+            "keywords": [
+                "imdb",
+                "laravel",
+                "scrape",
+                "scraping"
+            ],
+            "time": "2014-12-30 09:54:31"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3555,7 +3599,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gidlov/copycat": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

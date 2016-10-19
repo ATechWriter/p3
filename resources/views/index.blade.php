@@ -22,7 +22,9 @@
 
         <form method='POST' action='/users'>
             {{ csrf_field() }}
-            How many users? <input type='integer' name='userCount'>
+            <label>How many users? <input type='integer' name='userCount'></label><br/>
+            <label><input type='checkbox' name='birthdate' value='birthdate'> Include birthdate</label><br/>
+
             <input type='submit' value='Get Users' name='/users'>
         </form>
 

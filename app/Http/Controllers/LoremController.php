@@ -14,7 +14,7 @@ class LoremController extends Controller
         $paraCount = $request->input('paraCount');
 
         # Turn the word list into an array
-        define('__ROOT__', dirname(dirname(__FILE__)));
+        include_once 'Constants.php';
         $wordFile = (__ROOT__.'/Controllers/frankenWords.txt');
         $wordList = fopen($wordFile, 'r');
         $wordListRead = fread($wordList, filesize($wordFile));
