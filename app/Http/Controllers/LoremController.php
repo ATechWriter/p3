@@ -24,6 +24,7 @@ class LoremController extends Controller
         for ($p = $paraCount; $p > 0; $p--) {
 
             $paragraph = '';
+            $allParas = array('');
 
             # Determine the number of sentences in the paragraph
             $sentenceCount = rand(4, 20);
@@ -60,12 +61,21 @@ class LoremController extends Controller
 
                 # Join sentences into paragraphs
                 $paragraph = $paragraph.$sentence.' ';
+                if ($s == 0) {
+                    $paragraph = $paragraph.'</p>';
+                }
+
             }
 
-            # Return each paragraph as a lorem-classed <p> element
-            echo '<p class="lorem">'.$paragraph.'</p>';
+            # Join paragraphs together
+            $allParas = array_push($allParas, $paragraph);
 
-            // NEXT STEP: Make this output into a view
+            // # Return each paragraph as a lorem-classed <p> element
+            // $lorem = '<p class="lorem">'.$paragraph.'</p>';
+
         }
+
+        # Send it to a view
+        return view('lorem')->with('allParas', $allParas);
     }
 }

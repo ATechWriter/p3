@@ -26,7 +26,8 @@ Route::post('/users', 'UserController@generate');
 | Tools to scrape names (first and last)
 */
 Route::get('/scraper/first', function() {
-    require_once('copycat.php');
+    include('Constants.php');
+    require_once('Copycat.php');
     $cc = new Copycat;
     $cc->match(array(
     'first' => '/class="oxencycl-headword">(.+?)</ms',))->

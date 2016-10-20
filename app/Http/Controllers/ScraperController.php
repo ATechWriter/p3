@@ -14,7 +14,8 @@ class ScraperController extends Controller
     * @return Illuminate\Http\Response
     */
 
-    public function blah()
+    include_once 'Constants.php';
+    public function first()
     {
         return 'Hi from the scraper';
     }
